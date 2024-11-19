@@ -1,5 +1,3 @@
-
-// Profe, esto sirve para que a cada enlace que tiene el href="#" entonces, cuando alguien le hace "target"/click entonces hace la animación de scroll suave 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -13,7 +11,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// El function smoothScroll sirve para controlar la animación del scroll suave
 function smoothScroll(target, duration) {
     const targetPosition = target.getBoundingClientRect().top;
     const startPosition = window.pageYOffset;
@@ -27,11 +24,6 @@ function smoothScroll(target, duration) {
         if (timeElapsed < duration) requestAnimationFrame(animation);
     }
 
-    // Esto es para controlar el const run = ease (rapidez de la animación)
-    // t = timepo actual
-    // b = posicion inicial
-    // c = cambio en la posición
-    // d = duracion
     function ease(t, b, c, d) {
         t /= d / 2;
         if (t < 1) return c / 2 * t * t + b;
