@@ -1,0 +1,140 @@
+
+
+/* NAV */
+.header__box {
+    display: flex;
+    justify-content: center;
+}
+
+.header__ul {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    gap: 40px;
+}
+.ul__list {
+    padding: 10px;
+}
+.list__link {
+    color: #222e;
+}
+.link--active {
+    padding-bottom: 4px;
+    border-bottom: 2px solid #222e;
+}
+.link--active-tlf {
+    padding-left: 8px;
+    border-left: 2px solid #222e;
+}
+
+.link--tienda {
+    font-size: 1.12rem;
+    padding: 4px 10px;
+    background-color: #333;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #222e;
+}
+
+.list__link:hover {
+    border-bottom: 2px solid #222e;
+}
+
+.link--tienda:hover {
+    border: 1px solid #222e;
+}
+
+@media(max-width:995px) {
+    .header__box {
+        display: none;
+    }
+}
+
+/* Navegación tlf*/
+
+.menu-container {
+    position: absolute;
+}
+
+.menu-label {
+    display: none;
+}
+
+.menu-label input[type="checkbox"] {
+    display: none;
+}
+
+
+.hidden-buttons {
+    display: none;
+    margin-top: 10px;
+}
+
+.header__ul--tlf {
+    width: 9.5rem;
+    list-style: none;
+    gap: 40px;
+    background-color: #ffe7c8;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #222;
+    z-index: 40;
+}
+
+.list__link--tlf {
+    color: #222e;
+}
+.list__link--tlf:hover {
+    padding-left: 3px;
+    border-left: 2px solid #222e;
+}
+
+
+@media(max-width:995px) {
+    .menu-container {
+        position: absolute;
+        padding: 15px 10px;
+    }
+    
+    .menu-label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .menu-label input[type="checkbox"] {
+        display: none;
+    }
+    
+    .icon-box {
+        width: 1.5rem;
+        color: #aaa;
+        height: 1.5rem;
+        border: 1px solid #fff;
+        background-color: #222;
+        border-radius: 4px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        transition: all 0.3s;
+    }
+    
+    .menu-label input[type="checkbox"]:checked + .icon-box {
+        border-color: #fff;
+    }
+    
+    .menu-label input[type="checkbox"]:checked + .icon-box i {
+        color: white;
+    }
+    
+    .hidden-buttons {
+        display: none;
+        margin-top: 10px;
+    }
+    
+    .menu-label input[type="checkbox"]:checked ~ .hidden-buttons {
+        position: absolute;
+        top: 50px;
+        display: flex;
+        flex-flow: column wrap;
+    }
+}

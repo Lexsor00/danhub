@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fbe3c8;
+}
+
+.home {
+    margin-top: 90px;
+}
+
+.menu__title h2{
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Menus */
+
+.menu__types {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.menu__content {
+    display: flex;
+    justify-content: center;
+    width: 275px;
+    background-color: #2223;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #222;
+}
+
+.menu--1 {
+    animation: moveLeftRight 3s ease-in-out;
+}
+.menu--2 {
+    animation: moveRightLeft 3s ease-in-out;
+}
+
+.content__body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.img--normal {
+    margin-bottom: 27px;
+}
+
+.img--card {
+    scale: 0.85;
+    transition: scale 0.5s;
+}
+
+.body__text {
+    width: 200px;
+    border-top: 1px solid #444;
+    color: #8b6b47;
+    text-align: center;
+}
+
+.content__body:hover .img--card {
+    scale: 0.95;
+}
+
+
+
+/* Menu del Dia */
+
+.dia__content {
+    position: relative;
+    width: 350px;
+    margin: auto;
+    background-color: #ddb993;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 5px 5px 5px #444;
+}
+
+.dia__content span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #3a8330;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transform: rotateZ(15deg);
+}
+
+.dia__content h4 {
+    font-size: 1.1rem;
+    margin: 12px 0 4px 0;
+}
+
+.dia__content p {
+    font-size: 0.9rem;
+    margin-top: 3px;
+}
+
+
+/* Carta */
+
+.primer__img {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.7s, transform 0.6s;
+}
+.primer2 {
+    transform: translateX(-10px);
+    transition: opacity 0.7s, transform 0.6s;
+}
+
+.img--item {
+    width: 64px;
+    position: absolute;
+}
+.gaz {
+    top: -105px;
+    right: -70px;
+}
+.ensalada {
+    top: -40px;
+    right: -60px;
+}
+.cro {
+    top: -92px;
+    left: 260px;
+}
+.canelones {
+    top: -25px;
+    left: 240px;
+}
+
+.solo {
+    top: -78px;
+    right: -59px;
+}
+.paella {
+    top: -75px;
+    left: 276px;
+}
+.salmon {
+    top: -20px;
+    right: -80px;
+}
+.lasana {
+    top: -15px;
+    left: 250px;
+}
+
+.arroz {
+    top: -98px;
+    right: -89px;
+}
+.tqueso {
+    top: -100px;
+    left: 246px;
+}
+.frutas {
+    top: -40px;
+    right: -80px;
+}
+.profi {
+    top: -45px;
+    left: 240px;
+}
+
+
+.cacho {
+    top: -105px;
+    right: -79px;
+}
+.res {
+    top: -105px;
+    left: 256px;
+}
+.toro {
+    top: -30px;
+    right: -70px;
+}
+.codillo {
+    top: -35px;
+    left: 250px;
+}
+
+
+
+.dia--primer:hover .primer__img {
+    opacity: 1;
+    transform: translateX(0px);
+}
+.dia--segundo:hover .primer__img {
+    opacity: 1;
+    transform: translateX(0px);
+}
+.dia--postre:hover .primer__img {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
+/* Fondo */
+
+.img--gamba {
+    position: absolute;
+    z-index: -10;
+    width: 100px;
+    right: 0px;
+    animation: 
+        moveLeftRight2 12s linear infinite,
+        moveUpDown 2s ease-in-out infinite alternate;
+}
+
+
+/* Animaciones */
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes moveRightLeft {
+    0% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeftRight2 {
+    0% {
+        left: 90%;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        left: -80px;
+        opacity: 0;
+    }
+}
+
+@keyframes moveUpDown {
+    0% {
+        top: 125px; /* Posición inicial */
+        transform: rotate(0deg);
+    }
+    50% {
+        top: 100px; /* Posición más alta */
+        transform: rotate(-5deg); 
+    }
+    100% {
+        top: 150px; /* Posición más baja */
+        transform: rotate(5deg); 
+    }
+}
+
+
+/* Responsive */
+
+@media(max-width:995px) {
+    .home {
+        margin-top: 30px;
+    }
+    .menu__types {
+        gap: 30px;
+    }
+    .menu__content {
+        scale: 0.9;
+    }
+    .dia__content {
+        scale: 0.8;
+    }
+}
